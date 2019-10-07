@@ -15,6 +15,9 @@ function randomRange(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 //create random number between 18 & 120 for the current round
+function currentRound() {
+  return randomRange(18, 120);
+}
 
 //each gem needs to generate a random number between 1 & 12 for current round
 
