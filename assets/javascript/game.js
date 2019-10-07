@@ -20,6 +20,21 @@ function currentRound() {
 }
 
 //each gem needs to generate a random number between 1 & 12 for current round
+function gemRound() {
+  return randomRange(1, 12);
+}
+
+//create function to set value per gem for each round
+function gemValue() {
+  agate = gemRound();
+  console.log(agate);
+  amethyst = gemRound();
+  console.log(amethyst);
+  jasper = gemRound();
+  console.log(jasper);
+  jade = gemRound();
+  console.log(jade);
+}
 
 //onclick event linked to each gem and random numbers
 //these numbers must add up into user's current score for the game
