@@ -37,6 +37,7 @@ function gemValue() {
 }
 
 //onclick event linked to each gem and random numbers
+
 //these numbers must add up into user's current score for the game
 
 //if score adds up to random number == win
