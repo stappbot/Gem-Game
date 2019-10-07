@@ -6,6 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Gem Game</title>
     <link href="assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
-  <body></body>
+
+  <body>
+    <div class="container alert alert-primary">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Gem Game</h1>
+          <p class="lead">
+            You will get a random number at the beginning of each round.
+          </p>
+          <p>Each crystal below will add a specific number to your score.</p>
+          <p>
+            You win the round by matching your score to the number given. You
+            lose if your score goes above that number.
+          </p>
+          <p>
+            The value of each gem changes with each new round and it hidden
+            until you click on it.
+          </p>
+          <p>Good luck!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container alert alert-warning">
+      <div class="row">
+        <div class="col-4">
+          Current number: <span id="current-number"></span>
+        </div>
+        <div class="col-4">
+          <p>Wins: <span id="wins"></span></p>
+          <p>Losses: <span id="losses"></span></p>
+        </div>
+        <div class="col-4">Your total score is: <span id="score"></span></div>
+      </div>
+    </div>
+
+    <div class="container alert alert-info">
+      <div class="row">
+        <div class="col-3">
+          <img id="agate" src="assets/images/blue-lace-agate.jpg" />
+        </div>
+        <div class="col-3">
+          <img id="amethyst" src="assets/images/amethyst.jpg" />
+        </div>
+        <div class="col-3">
+          <img id="jasper" src="assets/images/ocean-jasper.jpg" />
+        </div>
+        <div class="col-3">
+          <img id="jade" src="assets/images/jade-stone.jpg" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
