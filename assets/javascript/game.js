@@ -10,10 +10,12 @@ var losses = 0;
 
 //grab ids from html for display purposes
 
-//create random number between 18 & 120 for the current round
-function randomNumber() {
-  return Math.floor(Math.random() * (120 - 18) + 18);
+//create a pure function to generate a number within a range
+function randomRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
+//create random number between 18 & 120 for the current round
+
 //each gem needs to generate a random number between 1 & 12 for current round
 
 //onclick event linked to each gem and random numbers
