@@ -3,7 +3,8 @@ body {
   background-repeat: repeat;
 }
 p,
-h1 {
+h1,
+div {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <h1>Gem Game</h1>
+    <title>Gem Game</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
@@ -17,8 +17,8 @@
 
   <body>
     <div class="container alert alert-primary">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+      <div class="jumbotron jumbotron-fluid alert alert-warning">
+        <div class="container alert alert-primary">
           <h1 class="display-4">Gem Game</h1>
           <p class="lead">
             You will get a random number at the beginning of each round.
@@ -33,6 +33,9 @@
             until you click on it.
           </p>
           <p><strong>Good luck!</strong></p>
+          <button type="button" id="start-game" class="btn btn-success">
+            Start Game!
+          </button>
         </div>
       </div>
     </div>
@@ -50,22 +53,35 @@
       </div>
     </div>
 
-    <div class="container alert alert-info">
+    <div class="container alert alert-primary">
       <div class="row">
         <div class="col-3">
-          <img id="agate" src="assets/images/blue-lace-agate.jpg" />
+          <button type="submit">
+            <img id="agate" src="assets/images/blue-lace-agate.jpg" />
+          </button>
         </div>
         <div class="col-3">
-          <img id="amethyst" src="assets/images/amethyst.jpg" />
+          <button type="submit">
+            <img id="amethyst" src="assets/images/amethyst.jpg" />
+          </button>
         </div>
         <div class="col-3">
-          <img id="jasper" src="assets/images/ocean-jasper.jpg" />
+          <button type="submit">
+            <img id="jasper" src="assets/images/ocean-jasper.jpg" />
+          </button>
         </div>
         <div class="col-3">
-          <img id="jade" src="assets/images/jade-stone.jpg" />
+          <button type="submit">
+            <img id="jade" src="assets/images/jade-stone.jpg" />
+          </button>
         </div>
       </div>
     </div>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
   <script src="assets/javascript/game.js"></script>
 </html>

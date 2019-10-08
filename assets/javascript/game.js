@@ -1,5 +1,7 @@
 //create variables for current number, gems, wins, and losses
 var currentNumber = 0;
+var score = 0;
+
 var agate = 0;
 var amethyst = 0;
 var jasper = 0;
@@ -7,6 +9,8 @@ var jade = 0;
 
 var wins = 0;
 var losses = 0;
+
+let gameIsOn = false;
 
 //grab ids from html for display purposes
 
@@ -36,10 +40,45 @@ function gemValue() {
   console.log(jade);
 }
 
+//adding function
+//function add() {
+//add clicked button to score
+//}
+//score = currentRound();
 //onclick event linked to each gem and random numbers
+function newGame() {
+  gemValue();
+  score = currentRound();
+}
 
+$("#start-game").on("click", newGame);
+{
+  //buttons to add gem numbers to user score
+  $("#agate").on("click", function() {
+    score += agate;
+    console.log(score);
+  });
+  $("#amethyst").on("click", function() {
+    score += amethyst;
+    console.log(score);
+  });
+  $("#jasper").on("click", function() {
+    score += jasper;
+    console.log(score);
+  });
+  $("#jade").on("click", function() {
+    score += jade;
+    console.log(score);
+  });
+  console.log(score);
+}
 //these numbers must add up into user's current score for the game
 
 //if score adds up to random number == win
+if (score === currentNumber) {
+  wins++;
+} else if (score > currentNumber) {
+  losses--;
+}
 //if score adds up to more than random number == lose
 //if score doesn't add up to random number, round still is going
