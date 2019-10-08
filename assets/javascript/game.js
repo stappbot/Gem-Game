@@ -31,13 +31,13 @@ function gemRound() {
 //create function to set value per gem for each round
 function gemValue() {
   agate = gemRound();
-  console.log(agate);
+  console.log("agate: " + agate);
   amethyst = gemRound();
-  console.log(amethyst);
+  console.log("amethyst: " + amethyst);
   jasper = gemRound();
-  console.log(jasper);
+  console.log("jasper: " + jasper);
   jade = gemRound();
-  console.log(jade);
+  console.log("jade: " + jade);
 }
 
 //adding function
@@ -48,7 +48,13 @@ function gemValue() {
 //onclick event linked to each gem and random numbers
 function newGame() {
   gemValue();
-  score = currentRound();
+  score = 0;
+  currentNumber = currentRound();
+  console.log("currentNumber" + currentNumber);
+  $("#wins").text(wins);
+  $("#losses").text(losses);
+  $("#current-number").text(currentNumber);
+  $("#score").text(score);
 }
 // function reset() {
 //   newGame;
@@ -56,28 +62,25 @@ function newGame() {
 // }
 
 $("#start-game").on("click", newGame);
-{
-  currentNumber = currentRound();
-  console.log(currentNumber);
-  //buttons to add gem numbers to user score
-  $("#agate").on("click", function() {
-    score += agate;
-    console.log(score);
-  });
-  $("#amethyst").on("click", function() {
-    score += amethyst;
-    console.log(score);
-  });
-  $("#jasper").on("click", function() {
-    score += jasper;
-    console.log(score);
-  });
-  $("#jade").on("click", function() {
-    score += jade;
-    console.log(score);
-  });
+//buttons to add gem numbers to user score
+$("#agate").on("click", function() {
+  score += agate;
   console.log(score);
-}
+});
+$("#amethyst").on("click", function() {
+  score += amethyst;
+  console.log(score);
+});
+$("#jasper").on("click", function() {
+  score += jasper;
+  console.log(score);
+});
+$("#jade").on("click", function() {
+  score += jade;
+  console.log(score);
+});
+console.log(score);
+
 //these numbers must add up into user's current score for the game
 //if score adds up to more than random number == lose
 //if score doesn't add up to random number, round still is going
