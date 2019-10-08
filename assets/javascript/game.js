@@ -31,68 +31,55 @@ function gemRound() {
 //create function to set value per gem for each round
 function gemValue() {
   agate = gemRound();
-  console.log("agate: " + agate);
   amethyst = gemRound();
-  console.log("amethyst: " + amethyst);
   jasper = gemRound();
-  console.log("jasper: " + jasper);
   jade = gemRound();
-  console.log("jade: " + jade);
+  //     $(".crystal").each(function() {
+  //         $(this).attr("crystalValue", gemRound());
+  //     })
 }
 
-//adding function
-//function add() {
-//add clicked button to score
-//}
-//score = currentRound();
 //onclick event linked to each gem and random numbers
 function newGame() {
   gemValue();
   score = 0;
   currentNumber = currentRound();
-  console.log("currentNumber" + currentNumber);
   $("#wins").text(wins);
   $("#losses").text(losses);
   $("#current-number").text(currentNumber);
   $("#score").text(score);
 }
-// function reset() {
-//   newGame;
-//   score = 0;
-// }
 
 $("#start-game").on("click", newGame);
 //buttons to add gem numbers to user score
 $("#agate").on("click", function() {
   score += agate;
-  console.log(score);
+  $("#score").text(score);
+  checkScore();
 });
 $("#amethyst").on("click", function() {
   score += amethyst;
-  console.log(score);
+  $("#score").text(score);
+  checkScore();
 });
 $("#jasper").on("click", function() {
   score += jasper;
-  console.log(score);
+  $("#score").text(score);
+  checkScore();
 });
 $("#jade").on("click", function() {
   score += jade;
-  console.log(score);
+  $("#score").text(score);
+  checkScore();
 });
-console.log(score);
-
-//these numbers must add up into user's current score for the game
-//if score adds up to more than random number == lose
-//if score doesn't add up to random number, round still is going
 
 //if score adds up to random number, user wins
-
-// if (score === currentNumber) {
-//   wins++;
-//   newGame;
-// } else if (score > currentNumber) {
-//   losses--;
-//   newGame;
-// }
-
-//reset game when score reaches currentNumber, goes over userNumber, or starting a new game (onclick)
+function checkScore() {
+  if (score === currentNumber) {
+    wins++;
+    newGame();
+  } else if (score > currentNumber) {
+    losses++;
+    newGame();
+  }
+}
