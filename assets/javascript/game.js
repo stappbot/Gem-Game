@@ -75,10 +75,10 @@ $("#start-game").on("click", newGame);
 //these numbers must add up into user's current score for the game
 
 //if score adds up to random number == win
-// if (score === currentNumber) {
-//   wins++;
-// } else if (score > currentNumber) {
-//   losses--;
-// }
+if (score === currentNumber) {
+  wins++;
+} else if (score > currentNumber) {
+  losses--;
+}
 //if score adds up to more than random number == lose
 //if score doesn't add up to random number, round still is going
