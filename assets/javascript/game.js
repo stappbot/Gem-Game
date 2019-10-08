@@ -50,9 +50,15 @@ function newGame() {
   gemValue();
   score = currentRound();
 }
+// function reset() {
+//   newGame;
+//   score = 0;
+// }
 
 $("#start-game").on("click", newGame);
 {
+  currentNumber = currentRound();
+  console.log(currentNumber);
   //buttons to add gem numbers to user score
   $("#agate").on("click", function() {
     score += agate;
@@ -73,12 +79,17 @@ $("#start-game").on("click", newGame);
   console.log(score);
 }
 //these numbers must add up into user's current score for the game
-
-//if score adds up to random number == win
-if (score === currentNumber) {
-  wins++;
-} else if (score > currentNumber) {
-  losses--;
-}
 //if score adds up to more than random number == lose
 //if score doesn't add up to random number, round still is going
+
+//if score adds up to random number, user wins
+
+// if (score === currentNumber) {
+//   wins++;
+//   newGame;
+// } else if (score > currentNumber) {
+//   losses--;
+//   newGame;
+// }
+
+//reset game when score reaches currentNumber, goes over userNumber, or starting a new game (onclick)
